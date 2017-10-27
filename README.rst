@@ -33,3 +33,9 @@ always get the value that was collected already anyway.
 If you think that this script is impacting any other script please reach out 
 to us at support@corelight.com and let us know what script you think it might
 be impacting.
+
+Authors
+-------
+
+Nate Guagenti @neu5ron
+Seth Hall <seth@corelight.com>

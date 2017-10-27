@@ -1,0 +1,5 @@
+[package]
+description = Add VLAN to all Bro logs.
+tags = log extend vlan
+version = 1.0.0
+script_dir = scripts

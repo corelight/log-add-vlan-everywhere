@@ -1,0 +1,5 @@
+[package]
+description = Add VLAN to all Bro logs.
+tags = log-extend-vlan, vlan
+depends = zkg >=2.0.7
+version = 1.1.0

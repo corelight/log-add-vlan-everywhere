@@ -10,16 +10,7 @@ redef record conn_id += {
 	vlan_inner: int &log &optional;
 };
 
-event connection_established(c: connection) &priority=4
-	{
-	if ( c?$vlan )
-		c$id$vlan = c$vlan;
-
-	if ( c?$inner_vlan )
-		c$id$vlan_inner = c$inner_vlan;
-	}
-
-event connection_rejected(c: connection) &priority=4
+event new_connection(c: connection) &priority=4
 	{
 	if ( c?$vlan )
 		c$id$vlan = c$vlan;

@@ -1,7 +1,7 @@
-Add VLAN tags to all Bro logs
------------------------------
+Add VLAN tags to all Zeek logs
+------------------------------
 
-This script adds VLAN tags to all of the Bro logs that have the ``conn_id``
+This script adds VLAN tags to all of the Zeek logs that have the ``conn_id``
 (``id``) field.
 
 Installation
@@ -9,13 +9,13 @@ Installation
 
 ::
 
-  bro-pkg refresh
-  bro-pkg install corelight/log-add-vlan-everywhere
+  zkg refresh
+  zkg install corelight/log-add-vlan-everywhere
 
 Usage
 -----
 
-All Bro logs that contain connection information with the ``c$id`` field 
+All Zeek logs that contain connection information with the ``c$id`` field 
 should have fields that indicate VLAN tags (named ``vlan`` and ``inner_vlan``).
 
 Potential Side Effects
@@ -23,7 +23,7 @@ Potential Side Effects
 
 There are potential side effects from loading this script if another script
 is indexing tables based on the ``c$id`` field.  This generally is not done
-in most modern scripts and is not done in the core Bro distribution anywhere.
+in most modern scripts and is not done in the core Zeek distribution anywhere.
 
 This script tries to avoid potential trouble with this indexing issue by 
 only grabbing the VLAN information from the  ``connection_established`` 
@@ -37,5 +37,7 @@ be impacting.
 Authors
 -------
 
-Nate Guagenti @neu5ron
-Seth Hall <seth@corelight.com>
+:: 
+
+  Nate Guagenti @neu5ron
+  Seth Hall <seth@corelight.com>

@@ -27,3 +27,4 @@ event connection_rejected(c: connection) &priority=4
 	if ( c?$inner_vlan )
 		c$id$vlan_inner = c$inner_vlan;
 	}
+

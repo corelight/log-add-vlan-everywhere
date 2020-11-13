@@ -6,12 +6,12 @@ redef record Files::Info += {
 
 event file_sniff(f: fa_file, meta: fa_metadata)
 	{
-	for ( id in f$conns )
+	for ( cid, c in f$conns )
 		{
-		if ( id?$vlan )
-			f$info$vlan = id$vlan;
-		if ( id?$vlan_inner )
-			f$info$vlan_inner = id$vlan_inner;
+		if ( c?$vlan )
+			f$info$vlan = c$vlan;
+		if ( c?$inner_vlan )
+			f$info$vlan_inner = c$inner_vlan;
 		# just grab the first one
 		break;
 		}

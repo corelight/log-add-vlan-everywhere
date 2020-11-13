@@ -1,5 +1,4 @@
 [package]
 description = Add VLAN to all logs.
 tags = log extend vlan
-version = 1.0.1
 script_dir = scripts
